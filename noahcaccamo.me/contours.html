@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<!-- Mirrored from noahcaccamo.me/contours by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 May 2021 21:39:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="twitter:card"  content="summary_large_image" />
+      <meta name="twitter:site"  content="@AdobePortfolio" />
+      <meta  property="og:title" content="Noah Caccamo - Contours" />
+      <meta  property="og:image" content="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/bbde28f8-aa36-4ffa-8318-94c0d8482afc_rwc_0x673x3024x1704x3024.jpg?h=f39c0c4175b496bdb08a99040e125396" />
+      <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURUxpcU3H2DoAAAABdFJOUwBA5thmAAAADElEQVQI12NgIA0AAAAwAAHHqoWOAAAAAElFTkSuQmCC"  />
+      <link rel="stylesheet" href="dist/css/main.css" type="text/css" />
+      <link rel="stylesheet" href="../pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ea75f2abc89c714e436b7a8eb14e1d051613795504a4fd.css?h=84dc2dcc5a6fdccfa9063c611cd46196" type="text/css" />
+    <link rel="canonical" href="contours.html" />
+      <title>Noah Caccamo - Contours</title>
+    <script type="text/javascript" src="../use.typekit.net/ik/Ysl-ItTi5IrjspTF52KoRg-zxRJtyL9UDvoz16S8C8GfezjgfHYEBsJzwD9oFDIDWD8RFQ6o5Qm8FRIk52iRjQ6aFD4RwRsqjDqaFhjXwDMawR6tF2SowD6-K6I7OcuoSeNkieZzde8zOcFzdP37OcozjAyRjAFRjAuzOcu8OfG0SY4zwKuh-AmaOcuoSeNkie?cb=" async onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script>
+</head>
+  <body class="transition-enabled">  <div class='page-background-video page-background-video-with-panel'>
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="work.html" >Work</a></div>
+      <div class="page-title">
+        <a href="contact.html" >Contact</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header " data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="work.html" >Work</a></div>
+      <div class="page-title">
+        <a href="contact.html" >Contact</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text  ">
+              <a href="work.html" class="preserve-whitespace">Noah Caccamo</a>
+
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p60035af35b2b5ab1025c237af58a5b3f6faea7525ae8763567fb2" data-hover-hint="pageHeader" data-hover-hint-id="p60035af35b2b5ab1025c237af58a5b3f6faea7525ae8763567fb2">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">Contours</h1>
+            <p class="description"></p>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p60035af35b2b5ab1025c237af58a5b3f6faea7525ae8763567fb2">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>Contours is a connect-the-dots book made in a Data Visualization course utilizing custom code to interpret height map data into labelled points you can trace.</div><div>Created by: Noah Caccamo and Devlin Macpherson</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m600368c62ca48ca55de93b8a3d2feace35d073fe0368c524b3226"  style="  padding-top: 0px;
+  padding-bottom: 20px;
+  width: 100%;
+">
+  <div class="grid--main js-grid-main" data-grid-max-images="
+    ">
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_3840.jpg?h=5b5e01f5167129825de1da33391677a5" srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_600.jpg?h=d6605c6d5bfab177317306155e4bc159 600w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_1200.jpg?h=cfba5cd6fc3941255056077926ecf1e9 1200w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_1920.jpg?h=84bc203267b8694b3647de500bdc8575 1920w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_3840.jpg?h=5b5e01f5167129825de1da33391677a5 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_3840.jpg?h=5b5e01f5167129825de1da33391677a5"
+        data-srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_600.jpg?h=d6605c6d5bfab177317306155e4bc159 600w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_1200.jpg?h=cfba5cd6fc3941255056077926ecf1e9 1200w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_1920.jpg?h=84bc203267b8694b3647de500bdc8575 1920w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/53def8c1-cef1-490c-8aad-16dce45ab1d5_rw_3840.jpg?h=5b5e01f5167129825de1da33391677a5 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_3840.jpg?h=5c648902d8105e63f4bc8ffbc213a8b6" srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_600.jpg?h=915dc3a212cc57d1d1fa583d1fc8d641 600w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_1200.jpg?h=b5c3c58063e0086c9d197e0888d508c3 1200w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_1920.jpg?h=d6605ee08635c8e71618148809e7f8f9 1920w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_3840.jpg?h=5c648902d8105e63f4bc8ffbc213a8b6 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_3840.jpg?h=5c648902d8105e63f4bc8ffbc213a8b6"
+        data-srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_600.jpg?h=915dc3a212cc57d1d1fa583d1fc8d641 600w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_1200.jpg?h=b5c3c58063e0086c9d197e0888d508c3 1200w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_1920.jpg?h=d6605ee08635c8e71618148809e7f8f9 1920w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/71066d3c-7ecf-470d-be71-71cd6498c8f7_rw_3840.jpg?h=5c648902d8105e63f4bc8ffbc213a8b6 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_3840.jpg?h=ddfda9dac78184248266200d0ba470f6" srcset="https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_600.jpg?h=99c0ac3df5beedb523170eb28eadd6d3 600w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_1200.jpg?h=c01bdb02602c5a71e8d90e641f56a034 1200w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_1920.jpg?h=916b833f3a48b1f1a14fe3e1cfa7fd3a 1920w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_3840.jpg?h=ddfda9dac78184248266200d0ba470f6 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_3840.jpg?h=ddfda9dac78184248266200d0ba470f6"
+        data-srcset="https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_600.jpg?h=99c0ac3df5beedb523170eb28eadd6d3 600w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_1200.jpg?h=c01bdb02602c5a71e8d90e641f56a034 1200w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_1920.jpg?h=916b833f3a48b1f1a14fe3e1cfa7fd3a 1920w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/23fc5b7b-5ae5-4d23-b1a2-3fc4b0bdb3af_rw_3840.jpg?h=ddfda9dac78184248266200d0ba470f6 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_3840.jpg?h=4eee619348b42cd235037dd2800549d2" srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_600.jpg?h=e19ff97c3d4cb8e8f5172cb4042b67ff 600w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_1200.jpg?h=96e9224d3cd2e5d3abd6b91d6d2038e3 1200w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_1920.jpg?h=f330101e41a6fbbad3a9e0f00c809a93 1920w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_3840.jpg?h=4eee619348b42cd235037dd2800549d2 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_3840.jpg?h=4eee619348b42cd235037dd2800549d2"
+        data-srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_600.jpg?h=e19ff97c3d4cb8e8f5172cb4042b67ff 600w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_1200.jpg?h=96e9224d3cd2e5d3abd6b91d6d2038e3 1200w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_1920.jpg?h=f330101e41a6fbbad3a9e0f00c809a93 1920w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/84386e6d-8737-4bad-b02b-2fc54e45e5aa_rw_3840.jpg?h=4eee619348b42cd235037dd2800549d2 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="1920" data-height="1440">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_1920.jpg?h=6a7fdb6055759b44b69e1e94203e7c95" srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_600.jpg?h=aa03aa3a066d17aaaa6b42bb848dc260 600w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_1200.jpg?h=794c791e8f4a5395795af170df8c37c3 1200w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_1920.jpg?h=6a7fdb6055759b44b69e1e94203e7c95 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_1920.jpg?h=6a7fdb6055759b44b69e1e94203e7c95"
+        data-srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_600.jpg?h=aa03aa3a066d17aaaa6b42bb848dc260 600w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_1200.jpg?h=794c791e8f4a5395795af170df8c37c3 1200w,https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/1e9f9272-d2dc-4048-a2b1-b9d6632f1ac5_rw_1920.jpg?h=6a7fdb6055759b44b69e1e94203e7c95 1920w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_3840.jpg?h=1c7d303ef0eb70673919727979789ec4" srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_600.jpg?h=5c4dc80ee4f633d7c0f80e4d9a59950f 600w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_1200.jpg?h=ad066b498a660d4047853c321df9878d 1200w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_1920.jpg?h=b9dcee998d900130f3918b37da9910f5 1920w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_3840.jpg?h=1c7d303ef0eb70673919727979789ec4 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_3840.jpg?h=1c7d303ef0eb70673919727979789ec4"
+        data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_600.jpg?h=5c4dc80ee4f633d7c0f80e4d9a59950f 600w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_1200.jpg?h=ad066b498a660d4047853c321df9878d 1200w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_1920.jpg?h=b9dcee998d900130f3918b37da9910f5 1920w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/4b61d155-42ea-465f-b251-0f13c9cd5805_rw_3840.jpg?h=1c7d303ef0eb70673919727979789ec4 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_3840.jpg?h=728ddee71e357d7107f671b0f6e6e683" srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_600.jpg?h=e27fd28fac186fbe649fba7ae2f75ebe 600w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_1200.jpg?h=54fa51735856a85fe387017f8a987706 1200w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_1920.jpg?h=876626cde30f7ef46bdfcc288dde797e 1920w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_3840.jpg?h=728ddee71e357d7107f671b0f6e6e683 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_3840.jpg?h=728ddee71e357d7107f671b0f6e6e683"
+        data-srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_600.jpg?h=e27fd28fac186fbe649fba7ae2f75ebe 600w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_1200.jpg?h=54fa51735856a85fe387017f8a987706 1200w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_1920.jpg?h=876626cde30f7ef46bdfcc288dde797e 1920w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/592df1a0-5be3-4cfb-863d-89ac0bdf6491_rw_3840.jpg?h=728ddee71e357d7107f671b0f6e6e683 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_3840.jpg?h=ac62f6c0d69338e04d82f49d5835f3ee" srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_600.jpg?h=ebf3928fc3825f92f3b33ed7a62276df 600w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_1200.jpg?h=80f3f11b9ccd165a0f4501403d5f094d 1200w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_1920.jpg?h=8688e690bd64863ccff11ec7984cb18f 1920w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_3840.jpg?h=ac62f6c0d69338e04d82f49d5835f3ee 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_3840.jpg?h=ac62f6c0d69338e04d82f49d5835f3ee"
+        data-srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_600.jpg?h=ebf3928fc3825f92f3b33ed7a62276df 600w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_1200.jpg?h=80f3f11b9ccd165a0f4501403d5f094d 1200w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_1920.jpg?h=8688e690bd64863ccff11ec7984cb18f 1920w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0c169212-bed0-4c45-b439-4ba115ae081a_rw_3840.jpg?h=ac62f6c0d69338e04d82f49d5835f3ee 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container" data-flex-grow="346.66666666667" style="width:346.66666666667px; flex-grow:346.66666666667;" data-width="3840" data-height="2880">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_3840.jpg?h=dbb444de2ae597ace7661bcea304c1fe" srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_600.jpg?h=84742a142a95e1dfb6d50929fe3df235 600w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_1200.jpg?h=240d19674682c1f97f34b0b28c591fc1 1200w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_1920.jpg?h=1036d8ab0b4f7b9cb59b2504dafc3412 1920w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_3840.jpg?h=dbb444de2ae597ace7661bcea304c1fe 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img
+        class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        
+        data-src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_3840.jpg?h=dbb444de2ae597ace7661bcea304c1fe"
+        data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_600.jpg?h=84742a142a95e1dfb6d50929fe3df235 600w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_1200.jpg?h=240d19674682c1f97f34b0b28c591fc1 1200w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_1920.jpg?h=1036d8ab0b4f7b9cb59b2504dafc3412 1920w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42bd13cc-12ff-4439-a271-e15ce9d9625c_rw_3840.jpg?h=dbb444de2ae597ace7661bcea304c1fe 3840w,"
+      >
+      <span class="grid__item-filler" style="padding-bottom:75%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">You may also like</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space" href="draw-together.html" data-context="pages" data-identity="id:p60035fa9ae5fd0273d36a4fb0b0ad30348d8ba436b55779bc7487">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x322643.png?h=d0406c61b20bd95985b0404b630a8c7c"
+              data-src="../pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x19163e22.png?h=813e7a39978d0f0c8018eaa8d9e7fd33"
+              data-srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x640.png?h=1478ad07b9b77c73691916548910af8d 640w, https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x1280.png?h=f98ae5fcc878c2754d47f80ac6adad58 1280w, https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x1366.png?h=c91eee0b178d3871b02e3bd49ec55923 1366w, https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x1920.png?h=52276fa014db6e1ca9fc236428e84b34 1920w, https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x1916.png?h=813e7a39978d0f0c8018eaa8d9e7fd33 2560w, https://pro2-bar-s3-cdn-cf.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/10cc6181-8e56-4b92-8432-5df697e85f1d_rwc_0x0x1916x1080x1916.png?h=813e7a39978d0f0c8018eaa8d9e7fd33 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1400px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Draw Together</div>
+                              <div class="date">2020</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="robot-rebel.html" data-context="pages" data-identity="id:p60035ab3d9d67307ba9c5c361d4ff73f9d7c5b708af1f348f06f0">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x325a62.png?h=632705dfec6cbc1a79061a9c749bc3b2"
+              data-src="../pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x1916779c.png?h=aa3b878de1f44b9f1a848e183e870369"
+              data-srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x640.png?h=031952737446be025f13ed8f9956f613 640w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x1280.png?h=00c3f72fe197ff4bfe26c2da4a1508e0 1280w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x1366.png?h=4759e7372080ac08e112fec1fa2fbd37 1366w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x1920.png?h=93f0230ef43c7453cc251c1e7d5361f8 1920w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x1916.png?h=aa3b878de1f44b9f1a848e183e870369 2560w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/ab650117-ba3f-422a-8ee0-d9662d357609_rwc_0x0x1916x1080x1916.png?h=aa3b878de1f44b9f1a848e183e870369 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1400px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Robot Rebel</div>
+                              <div class="date">2019</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="nekiroku.html" data-context="pages" data-identity="id:p600363ad827271fe5b35611a5d6650763cccd168571a40fb2f32c">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x32775b.png?h=b1f8c8549532f8ea7e52a853348324bb"
+              data-src="../pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x13106666.png?h=004f3b7bd5378c89ea92a437e23ecf86"
+              data-srcset="https://pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x640.PNG?h=706d528ec3038fc22a458d459aa98eac 640w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x1280.PNG?h=83de15e2999deb317ff5630277dc41df 1280w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x1366.PNG?h=63b031814eb0b7e03386388167ddac86 1366w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x1920.PNG?h=ee553c80d851cde61672579064e0578a 1920w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x1310.PNG?h=004f3b7bd5378c89ea92a437e23ecf86 2560w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/69b2be80-d6fd-4efc-8403-e73ff7d70535_rwc_464x0x1310x738x1310.PNG?h=004f3b7bd5378c89ea92a437e23ecf86 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1400px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Nekiroku</div>
+                              <div class="date">2019</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="together-alone.html" data-context="pages" data-identity="id:p60035a6e1abef8caef194e5a41fa1c3aa98fda46589d7e280ca4c">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x324585.png?h=7b70eb90fb129685d88f6e265c3c2331"
+              data-src="../pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x1183596a.png?h=9e949bdc260e06466b2ef13bec5f62eb"
+              data-srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x640.png?h=a27956221a814b54fe87138000a6e00c 640w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x1183.png?h=9e949bdc260e06466b2ef13bec5f62eb 1280w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x1183.png?h=9e949bdc260e06466b2ef13bec5f62eb 1366w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x1183.png?h=9e949bdc260e06466b2ef13bec5f62eb 1920w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x1183.png?h=9e949bdc260e06466b2ef13bec5f62eb 2560w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/0ab0cfbb-b684-411b-be04-841af974f1c1_rwc_43x0x1183x667x1183.png?h=9e949bdc260e06466b2ef13bec5f62eb 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1400px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Together Alone</div>
+                              <div class="date">2018</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="gigaworld.html" data-context="pages" data-identity="id:p6000e9c30f5c86f0618fa4027b6cad6dfb8c3e7d79101f512e908">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x32e726.jpg?h=21704c9cb61dfed6bb9af7bbd874b7df"
+              data-src="../pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x3455ddc7.jpg?h=343b223a54bf36f2751646113f671801"
+              data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x640.jpg?h=e20a9a24ad73e4fb2bb5b5a891b2a425 640w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x1280.jpg?h=fe618808165bf699c3f5440722bf51bf 1280w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x1366.jpg?h=723761b4dd1d828c01cb46265dfae376 1366w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x1920.jpg?h=624f5b45f228d95b082e7edba1f83266 1920w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x2560.jpg?h=34433e177f2aa872d959752a8e94c6c3 2560w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/48954b76-433e-4f31-81ee-48fb3010a95a_rwc_0x1429x3455x1947x3455.jpg?h=343b223a54bf36f2751646113f671801 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1400px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">gigaWorld();</div>
+                              <div class="date">2019</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="trapped.html" data-context="pages" data-identity="id:p60035a9dd5a823c345e03b236e8b090c25a79aa4523ab49d0be95">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x32e5d0.png?h=41a97edc6bc3fdac46a58087690b49b6"
+              data-src="../pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x1809f9a1.png?h=739257e700fef56fd3c2682f236ed7d6"
+              data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x640.png?h=99aa2338e5b20d1a308b9df61047d539 640w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x1280.png?h=7d3deb4204410f9660dd4b5aa38de291 1280w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x1366.png?h=7a2c6a7ce9858fcf649e1d34b90bcef9 1366w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x1920.png?h=357ba064a4c502775c92fb4230800d73 1920w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x1809.png?h=739257e700fef56fd3c2682f236ed7d6 2560w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/e94909ae-0b09-4c10-a1b6-cb771ed90df4/42f4a178-1468-4702-81af-f3710b834659_rwc_0x0x1809x1020x1809.png?h=739257e700fef56fd3c2682f236ed7d6 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1400px / 2)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Trapped</div>
+                              <div class="date">2018</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">&uarr;</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"/>
+          </g>
+          </svg>
+        </a>
+  </div>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":30,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p60035af35b2b5ab1025c237af58a5b3f6faea7525ae8763567fb2","theme":{"name":"marta\/ludwig"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false}};</script>
+  <script type="text/javascript" src="site/translationscb21?cb="></script>
+  <script type="text/javascript" src="dist/js/maincb21.js?cb="></script>
+
+<!-- Mirrored from noahcaccamo.me/contours by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 May 2021 21:39:38 GMT -->
+</html>
