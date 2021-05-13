@@ -34205,36 +34205,29 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 @media (max-width: 991px) {
-  .u-header .u-menu-1 {
-    width: auto;
-    margin-top: 44px;
-    margin-right: 0;
-    margin-left: auto;
-  }
-
   .u-header .u-text-1 {
-    margin: -33px 226px 49px 243px;
+    margin-left: 243px;
+    margin-right: 226px;
   }
 }
 @media (max-width: 767px) {
-  .u-header .u-sheet-1 {
-    min-height: 176px;
+  .u-header .u-menu-1 {
+    width: 24px;
   }
 
   .u-header .u-text-1 {
-    margin: 20px 0 46px auto;
+    margin-left: 153px;
+    margin-right: 136px;
   }
 }
 @media (max-width: 575px) {
-  .u-header .u-sheet-1 {
-    min-height: 170px;
-  }
-
   .u-header .u-menu-1 {
     margin-top: 34px;
   }
 
   .u-header .u-text-1 {
+    margin-top: 20px;
+    margin-right: auto;
     margin-left: 0;
   }
 }
